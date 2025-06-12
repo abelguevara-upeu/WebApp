@@ -1,0 +1,26 @@
+<nav class="menu__side">
+
+  <div class="name__page">
+    <i class="fab fa-youtube" [routerLink]="['/home/welcome']"></i>
+    <h4>SPPU</h4>
+  </div>
+
+  <ul class="options__menu">
+
+    <li>
+    <a [routerLink]="['/home/']" class="option">
+        <i class="fas fa-home" title="Inicio"></i>
+        <h4>Inicio</h4>
+      </a>
+    </li>
+
+
+    <li>
+      <a class="option" [routerLink]="['/home/reservas/gestionar']">
+        <i class="fas fa-book" title="Reservas"></i>
+        <h4>Gestionar reservas</h4>
+      </a>
+    </li>
+
+  </ul>
+</nav>

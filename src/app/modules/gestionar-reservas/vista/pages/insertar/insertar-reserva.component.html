@@ -1,0 +1,45 @@
+<div class="container py-5 px-5">
+  <form (ngSubmit)="agregarReserva()" class="row g-3 needs-validation" novalidate>
+
+    <div class="col-3">
+      <label for="validationCustom01" class="form-label">Clase:</label>
+      <input type="text" class="form-control" id="validationCustom01" [(ngModel)]="nuevaReserva.clase" name="clase" required>
+      <div class="valid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Este campo es requerido.</div>
+    </div>
+
+    <div class="col-md-8 form-group">
+      <label for="curso" class="form-label"> Cliente </label>
+      <select class="form-control" id="curso" name="cliente" required [(ngModel)]="nuevaReserva.clienteReferente">
+        <option value="" disabled selected>Selecciona un tipo</option>
+        <option *ngFor="let item of clientes" [ngValue]="item">{{ item.nombres }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label for="curso" class="form-label"> Hotel</label>
+      <select class="form-control" id="curso" name="hotel" required [(ngModel)]="nuevaReserva.hotelReferente">
+        <option value="" disabled selected>Selecciona un tipo</option>
+        <option *ngFor="let item of hoteles" [ngValue]="item">{{ item.nombreHotel}}</option>
+      </select>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label for="curso" class="form-label"> Sucursal </label>
+      <select class="form-control" id="curso" name="sucursal" required [(ngModel)]="nuevaReserva.sucursalReferente">
+        <option value="" disabled selected>Selecciona un tipo</option>
+        <option *ngFor="let item of sucursales" [ngValue]="item">{{ item.nombreSucursal}}</option>
+      </select>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label for="curso" class="form-label"> Vuelo de destino </label>
+      <select class="form-control" id="curso" name="vuelo" required [(ngModel)]="nuevaReserva.vueloReferente">
+        <option value="" disabled selected>Selecciona un tipo</option>
+        <option *ngFor="let item of vuelos" [ngValue]="item">{{ item.destino}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" >Agregar proyección</button>
+  </form>
+</div>

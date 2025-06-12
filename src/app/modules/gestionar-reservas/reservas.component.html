@@ -1,0 +1,9 @@
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link" id="nav-listarLibro-tab"  type="button" role="tab"  aria-selected="true" [routerLink]="['/home/reservas/gestionar/listarReservas']" routerLinkActive="active">Listar reservas</button>
+    <button class="nav-link" id="nav-insertarLibro-tab"  type="button" role="tab" aria-selected="false" [routerLink]="['/home/reservas/gestionar/insertarReserva']" routerLinkActive="active">Insertar reservas</button>
+    <button class="nav-link disabled" id="nav-actualizarLibro-tab"  type="button" role="tab" aria-selected="false" [routerLink]="['/home/reservas/gestionar/editarReserva']" routerLinkActive="active">Actualizar reservas</button>
+    <button class="nav-link disabled" id="nav-actualizarLibro-tab"  type="button" role="tab" aria-selected="false" [routerLink]="['/home/reservas/gestionar/detallesReserva']" routerLinkActive="active">Detalles</button>
+  </div>
+</nav>
+<router-outlet></router-outlet>

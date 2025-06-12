@@ -1,0 +1,9 @@
+<section class="container-header" [ngClass]="{'show': !status, 'large':status}">
+  <app-header [nombre]="nombre"></app-header>
+</section>
+<section  class="container-sidebar" [ngClass]="{'container-sidebar-short': !status, 'container-sidebar-large':status}">
+  <app-sidebar></app-sidebar>
+</section>
+<section class="main" [ngClass]="{'show': !status, 'large':status}">
+  <router-outlet></router-outlet>
+</section>
